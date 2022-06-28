@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+:root{
+  --font: 'MedievalSharp', cursive;
+  --shadow: 2px 2px 2px rgb(110, 110, 110);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2, h3, p, a, button{
+  font-family: var(--font);
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.main {
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100vw;
+  height: 100vh;
+  background-color: cornflowerblue;
+}
+
+.stats {
+  width: 100%;
+  height: 20rem;
+  padding: 1rem;
+  background-image: url(../img/Table.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 3rem;
+  z-index: 1;
+  box-shadow: var(--shadow);
+}
+
+.stat__text {
+  text-align: center;
+  margin: auto 1rem;
+  font-size: 2rem;
+  text-shadow: var(--shadow);
+}
+
+.icon {
+  place-self: center;
+  width: 3rem;
+  height: 3rem;
+  margin: auto 0;
+}
+
+.stat-num {
+  text-align: center;
+  margin: auto;
+  font-size: 1.8rem;
+  color: rgb(195, 195, 195);
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
+.table{
+  width: 100%;
+  height: 20rem;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  gap: 4rem;
+  background-image: url(../img/Table-message.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateY(-120%);
+  transition: transform 0.4s ease ;
+  z-index: 1;
+  box-shadow: var(--shadow);
+}
+
+.table__title{
+  font-size: 2rem;
+  text-shadow: var(--shadow);
+}
+
+.table__text{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--crimson);
+  text-shadow: var(--shadow);
+}
+
+.table-show{
+  transform: translateY(0);
+}
+
+.gym {
+  width: 100%;
+  height: 20rem;
+  background-image: url(../img/Table.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: var(--shadow);
+  grid-template-areas:
+    ". titulo ."
+    "botonV botonS botonD";
+}
+
+.gym__title {
+  grid-area: titulo;
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: var(--shadow);
+}
+
+.gym__button {
+  width: 14rem;
+  height: 5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+  background-image: url(../img/button.png);
+  background-size: cover;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.gym__button:hover{
+  transform: translateY(-3px);
+}
+
+.gym__button:active{
+  transform: translateY(0);
+}
+
+.gym__button-vit {
+  grid-area: botonV;
+}
+
+.gym__button-str {
+  grid-area: botonS;
+}
+
+.gym__button-def {
+  grid-area: botonD;
+}
+
+.cloud{
+  width: 27.5rem;
+  height: 20rem;
+  background-size: cover;
+  background-image: url(../img/cloud.png);
+  position: absolute;
+  animation: move 20s linear infinite alternate;
+}
+
+@keyframes move{
+  from{
+    left: 0%;
+    top: 10%;
+  }
+
+  to{
+    left: 80%;
+    top: 10%;
+  }
+}

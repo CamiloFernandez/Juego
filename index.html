@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Juego</title>
+</head>
+
+<body>
+  <main class="main grid">
+
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+
+    <!-- Estadisticas -->
+
+    <div class="stats grid">
+
+      <div class="stat flex">
+        <img class="icon" src="img/heart.png" alt="Corazon">
+        <h2 class="stat__text upper">vitalidad</h2>
+      </div>
+      <p class="stat-num upper" id="vit">10</p>
+
+      <div class="stat flex">
+        <img class="icon" src="img/dumbbell.png" alt="Pesa">
+        <h2 class="stat__text upper">fuerza</h2>
+      </div>
+      <p class="stat-num upper" id="str">2</p>
+
+      <div class="stat flex">
+        <img class="icon" src="img/shield.png" alt="Escudo">
+        <h2 class="stat__text upper">defensa</h2>
+      </div>
+      <p class="stat-num upper" id="def">2</p>
+
+      <div class="stat flex">
+        <img class="icon" src="img/stamina.png" alt="Rayo">
+        <h2 class="stat__text upper">energia</h2>
+      </div>
+      <p class="stat-num upper" id="eng">100</p>
+
+      <div class="stat flex">
+        <img class="icon" src="img/rupia.png" alt="Rupia">
+        <h2 class="stat__text upper">rupias</h2>
+      </div>
+
+      <p class="stat-num upper" id="money">1000</p>
+    </div>
+
+    <!-- Tablero de mensajes -->
+
+    <div id="table" class="table flex">
+      <h2 class="table__title upper">Tablero de mensajes</h2>
+      <p id="sm" class="table__text upper">texto de prueba</p>
+    </div>
+
+    <!-- Entrenamiento -->
+
+    <div class="gym grid">
+      <h2 class="gym__title">Entrenar</h2>
+      <button id="btnVit" class="gym__button gym__button-vit upper" onclick="trainVit()">vitalidad</button>
+      <button id="btnStr" class="gym__button gym__button-str upper" onclick="trainStr()">fuerza</button>
+      <button id="btnDef" class="gym__button gym__button-def upper" onclick="trainDef()">defensa</button>
+    </div>
+
+  </main>
+
+  <script src="scrips/main.js"></script>
+</body>
+
+</html>
